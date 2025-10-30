@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Twine Game",
+      "type": "shell",
+      "command": "tweego src/ scripts/script.js styles/style.css -o index.html",
+      "group": "build"
+    }
+  ]
+}

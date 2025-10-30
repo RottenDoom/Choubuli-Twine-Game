@@ -1,0 +1,23 @@
+
+:: ThiefsAmbush
+<<set $textChunks to [
+  "Khapariyau the Thief had learned from his spies the exact time the sethani walked through the tunnel. He and his cronies block her path.",
+  "\"You've come behind your lord's back to meet your lover!\" he snarled. \"The disgrace would make the earth split in two. Hand over all your jewelry and give yourself to us, or we'll expose your shame!\"",
+  "The sethani was frightened but quickly recovered.",
+  "**What should she do?**"
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/tunnel.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">
+      [[Tell him the complete truth about what happened|TruthToThief]]
+      [[Try to bargain with the jewelry to buy his silence|BargainWithThief]]
+    </span>
+  </div>
+</div>
+

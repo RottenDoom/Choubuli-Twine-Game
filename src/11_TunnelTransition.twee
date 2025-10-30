@@ -1,0 +1,19 @@
+
+:: TunnelTransition
+<<set $textChunks to [
+  ""
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <div class="story-panel">
+      <!-- Video or ambient scene could go here -->
+    </div>
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[Continue|CautiousJourney]]</span>
+  </div>
+</div>
+

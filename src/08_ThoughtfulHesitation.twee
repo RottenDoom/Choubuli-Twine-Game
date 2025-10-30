@@ -1,0 +1,20 @@
+
+:: ThoughtfulHesitation
+<<set $textChunks to [
+  "\"I need time,\" the bride says carefully. \"This is a dangerous path you propose. If we are discovered, everything is lost.\"",
+  "For three long days, she struggles with her heart. She prays. She thinks of her duty to the seth, who may yet return. She stares at her reflection and asks herself who she really is.",
+  "On the third night, she returns to the window and sees the thakur waiting.",
+  "She makes her choice: yes, she will come. But carefully. Thoughtfully."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/mahal.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[The tunnel is complete|TunnelEntrance]]</span>
+  </div>
+</div>
+

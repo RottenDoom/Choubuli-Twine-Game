@@ -1,0 +1,18 @@
+:: BargainWithThief
+"Please," the sethani begins, "take all my jewelry, just let me pass and say nothing—"
+
+But the thief laughs cruelly. "You think jewels will buy my silence about such scandal? No, we want more than that."
+
+His cronies close in. The sethani realizes her mistake too late.
+
+<p class="bad-end-text">
+<strong>Deception breeds more deception.</strong>
+</p>
+
+[[Try again - what should she have done?|ThiefsAmbush]]
+
+<<script>>
+  shakeSound.play();
+  $('#passages').addClass('shake');
+  setTimeout(function(){ $('#passages').removeClass('shake'); }, 500);
+<</script>>

@@ -1,0 +1,23 @@
+:: ChoubolitStruggle1
+<h2 class="story-title">Chouboli's Struggle - First Wave</h2>
+
+The argument grows more heated. Their voices rise and clash.
+
+Chouboli's jaw clenches. Her hands grip the cushions tightly.
+
+<div class="struggle-box">
+**Chouboli's thoughts:** 
+
+*They're both wrong. The sethani was most true. She could have lied so easily... But no. I mustn't speak. I swore an oath. Control yourself.*
+</div>
+
+**What does Chouboli do?**
+
+<div class="choice-container">
+<div class="choice-button">
+[[Stay Silent|ChoubolitStruggle2]]
+</div>
+<div class="choice-button">
+[[SPEAK|ChobouliFourthSpeech]]
+</div>
+</div>

@@ -1,0 +1,34 @@
+
+:: ChoubolitStruggle2
+<<set $textChunks to [
+  "The storyteller and necklace continue their infuriating debate, going in circles, missing the OBVIOUS truth.",
+  "Chouboli's breathing quickens. Her nails dig into her palms. The words are RIGHT THERE, burning in her throat.",
+  "**Chouboli's thoughts:**",
+  "*How can they not see?! The SETHANI risked everything for truth! She's the one who—no. NO. Silence. I must maintain silence. This is a trick. This storyteller is TRYING to make me speak. Stay strong. Stay silent.*",
+  "The argument reaches absurd heights. They're saying the THIEF was more honest than the woman who confessed to her husband?!",
+  "**Chouboli feels the pressure mounting...**"
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="struggle-box2">
+      <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    </div>
+
+    <span id="next-link" style="display:none;">
+      <div class="choice-container2">
+        <div class="choice-button">
+          [[Stay Silent|ChoubolitStruggle3]]
+        </div>
+        <div class="choice-button2">
+          [[SPEAK|ChobouliFourthSpeech]]
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+

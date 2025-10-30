@@ -1,0 +1,19 @@
+
+:: SethDeparture
+<<set $textChunks to [
+  "In a distant village lived a wealthy seth. He returned from his wedding with a bride as beautiful as Gangaur herself. But within three days, an auspicious moment for business arrived — one that wouldn't come for another seven years.",
+  "The seth looked at his bride with indifference. \"I must leave at once,\" he told her. \"The stars have aligned.\"",
+  "\"But we've only just married,\" she cried. \"Why abandon the sunshine of our youth to chase fool's gold?\"",
+  "\"Those who make money understand the world better than anyone else,\" the seth replied coldly.",
+  "And he left. The bride stood in the doorway, watching him disappear."
+]>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/mahal.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[Continue|EyesAcrossDistance]]</span>
+  </div>
+</div>

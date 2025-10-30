@@ -1,0 +1,16 @@
+:: NecklaceOffer
+<<set $textChunks to [
+  "“Where... am I?”"
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+	<div id="game-container">
+		<img id="background" src="images/village.jpg">
+		<img class="character-sprite" src="images/character.webp">
+	</div>
+	<div id="dialogue-box" onclick="nextChunk()">
+		<div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+		<span id="next-link" style="display:none;">[[Continue|VillageTransition]]</span>
+	</div>
+</div>

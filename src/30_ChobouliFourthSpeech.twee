@@ -1,0 +1,46 @@
+
+:: ChobouliFourthSpeech
+<<set $textChunks to [
+  "Princess Chouboli EXPLODES from her cushions, unable to bear another second.",
+  "**\"Why are you both prattling on like fools? The answer is OBVIOUS!\"**",
+  "Her voice rings through the Golden Palace:",
+  "**\"The SETHANI was most true! She could have deceived her lord easily! She could have hidden everything! But no—she told the complete truth, knowing it might destroy her marriage!\"**",
+  "She's breathing hard, eyes blazing with conviction.",
+  "**\"You don't know how to distinguish between true and false! The sethani's words came from a wife's mouth—and you wouldn't often find such honesty there! SHE was most true!\"**"
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+
+    <span id="next-link" style="display:none;">
+      <p class="drum-text">
+        <strong>DHAM-DHAMADHAM!  DHAM-DHAMADHAM!</strong>
+      </p>
+
+      <<set $speechCount to 4>>
+
+      <p class="speech-count">
+        *The unspeaking Chouboli has spoken FOR THE FOURTH TIME!*
+      </p>
+
+      Then the storyteller cries out with joy:
+
+      **"BEAT THE DRUMS TO A GLORIOUS BEAT!"**
+
+      [[The story concludes|VictoryEnding]]
+
+      <<script>>
+        dialogueSound.play();
+        shakeSound.play();
+        $('#passages').addClass('shake');
+        setTimeout(function(){ $('#passages').removeClass('shake'); }, 500);
+      <</script>>
+    </span>
+  </div>
+</div>
+

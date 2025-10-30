@@ -1,0 +1,20 @@
+
+:: ArgueThief
+<<set $textChunks to [
+  "\"No, NO!\" the storyteller insists. \"The thief overcame his very NATURE! Born to steal, raised to steal—and yet he let her pass! That's TRUE virtue!\"",
+  "The necklace counters: \"But the thakur overcame temptation too!\"",
+  "\"The thakur had wealth and status! The thief sacrificed everything—his tunnel, his plan, his profit! He went against everything he was!\"",
+  "The argument grows heated..."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[The debate intensifies|ChoubolitStruggle1]]</span>
+  </div>
+</div>
+

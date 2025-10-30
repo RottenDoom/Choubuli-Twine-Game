@@ -1,0 +1,20 @@
+
+:: ArgueSeth
+<<set $textChunks to [
+  "\"The SETH was most true!\" the storyteller proclaims. \"He heard a confession that would shatter most men's hearts—and FORGAVE!\"",
+  "The necklace protests: \"But the thakur showed virtue!\"",
+  "\"The SETH forgave genuine betrayal! The bride had dressed for another man, walked through darkness to him. And yet—he forgave because she spoke truth!\"",
+  "The argument escalates..."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[The argument escalates|ChoubolitStruggle1]]</span>
+  </div>
+</div>
+

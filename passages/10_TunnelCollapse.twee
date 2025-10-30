@@ -1,0 +1,30 @@
+:: TunnelCollapse
+<h2 class="bad-end-title">The Tunnel Collapse</h2>
+
+<div class="bad-end">
+
+In her eagerness, she rushes through the tunnel without thinking. She does not notice the cracks in the walls. She does not hear the creaking of ancient stone.
+
+All she hears is her own heartbeat and the call of her lover.
+
+**A sound like the world splitting open echoes through the darkness.**
+
+The ceiling gives way. Stone crashes down in a thunderous avalanche. Her screams pierce the blackness for only a moment before they are swallowed whole.
+
+The tunnel becomes her tomb.
+
+</div>
+
+<p class="bad-end-text">
+<strong>Haste leads to death. Patience is a virtue.</strong>
+</p>
+
+<p style="text-align: center; margin-top: 30px;">
+[[Try again from the tunnel entrance|TunnelEntrance]]
+</p>
+
+<<script>>
+  shakeSound.play();
+  $('#passages').addClass('shake');
+  setTimeout(function(){ $('#passages').removeClass('shake'); }, 500);
+<</script>>

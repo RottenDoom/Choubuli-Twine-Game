@@ -1,0 +1,19 @@
+:: FrameNarration
+<div class="frame-container">
+
+<!--
+<video autoplay muted class="video-style2">
+<source src="videos/throne_room_intro.mp4" type="video/mp4">
+</video>
+ -->
+
+<div class="narration-text">
+Just as eyes look more alluring outlined with kohl, and a brow looks prettier decorated with a tiki in vermillion red, so is a story better told with hunkara—affirming exclamations during storytelling.
+
+A handsome young storyteller stands before Chouboli, who sits in silence on an ornate bed, bound by an oath never to speak. The glittering necklace around her neck gleams in the lamplight.
+</div>
+
+[[The storyteller speaks|NecklaceOffer]]
+</div>
+
+<!--audio autoplay loop><source src="audio/bgmusic.mp3" type="audio/mpeg"></audio -->

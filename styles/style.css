@@ -1,0 +1,184 @@
+:root {
+  --game-width: 80%;
+  --aspect: 16/9;
+  --character-height: 70%;
+}
+
+
+/* NUKE THE UI BAR COMPLETELY */
+#ui-bar {
+  display: none !important;
+}
+
+#ui-bar-tray {
+  display: none !important;
+}
+
+#ui-bar-history {
+  display: none !important;
+}
+
+/* Remove the left margin that UI bar creates */
+#story {
+  margin-left: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Reset everything to act like a normal webpage */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#passages {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1000px; /* or whatever width you want for your game */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#passages > .passage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.video-style {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video-style video,
+.video-style iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#scene {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+/* Game container: configurable frame */
+#game-container {
+  position: relative;
+  width: var(--game-width);        /* You can tweak this */
+  aspect-ratio: var(--aspect); /* Keeps the frame proportional */
+  border-radius: 25px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+#dialogue-box { 
+  width: var(--game-width);
+  min-height: 100px; /* Minimum height */ 
+  max-height: 150px; /* Maximum height */ 
+  background: rgba(0, 0, 0, 0.85); 
+  border: 4px solid #34495e; 
+  border-radius: 15px; padding: 25px 30px; 
+  box-shadow: 0 5px 20px rgba(0,0,0,0.6); 
+  color: #fff; overflow-y: auto; /* Scroll if text is too long */ 
+  cursor: pointer; /* Show it's clickable */ 
+  position: relative; 
+}
+
+/* Background stays contained and scales nicely */
+#background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fill the frame, may crop slightly */
+  object-position: center;
+  display: block;
+}
+
+/* Character stays on top, anchored at bottom center */
+.character-sprite {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: var(--character-height);        /* Make this configurable */
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+}
+
+.character-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.dialogue-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.narration-text {
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #ddd;
+}
+
+/* Click indicator */
+#dialogue-box::after {
+  content: '▼';
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 20px;
+  color: #3498db;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Hide click indicator when no more text */
+#dialogue-box.finished::after {
+  display: none;
+}
+
+/* Links styling */
+#dialogue-box a {
+  display: inline-block;
+  /* background: linear-gradient(135deg, #3498db, #2980b9); */
+  border: 2px solid #2c3e50;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white !important;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+#dialogue-box a:hover {
+  /* background: linear-gradient(135deg, #5dade2, #3498db); */
+  transform: translateX(5px);
+}

@@ -1,0 +1,34 @@
+:: NecklaceOffer
+<<set $speechCount to 0>>
+
+<div id="scene">
+  <canvas id="particle-canvas"></canvas>
+
+  <img src="images/chaubuli_background.jpg" usemap="#roommap" alt="Throne room scene" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+
+  <map name="roommap">
+    <area shape="rect" coords="200,300,400,500" alt="Bed" href="#" onclick="Dialog.setup('Object Properties'); Dialog.wiki('This is an ornate bed where Chouboli sits.'); Dialog.open(); return false;">
+
+    <area shape="rect" coords="600,200,800,600" alt="Person" href="#" onclick="dialogueSound.play(); Dialog.setup('Storyteller Speaks'); Dialog.wiki('My good bed, you have been gracious. Once I find someone to give the hunkara, I can begin the next story.'); Dialog.open(); return false;">
+
+    <area shape="rect" coords="400,500,500,600" alt="Necklace" href="#" onclick="dialogueSound.play(); Dialog.setup('Necklace Speaks'); Dialog.wiki('The necklace calls out: \\'I will! Such a storyteller deserves many exclamations and sighs!\\''); Dialog.open(); return false;">
+  </map>
+</div>
+
+"My good bed, you have been gracious," the storyteller says. "Once I find someone to give the hunkara, I can begin the next story."
+
+**The necklace calls out:** "I will! Such a storyteller deserves many exclamations and sighs!"
+
+Chouboli's rage flares instantly. She tears the necklace from her neck and hurls it across the room!
+
+**The necklace speaks from the floor:** "If it be your royal wish to tear me off, so be it. Your neck shall remain bare. But I have sworn to give the hunkara, and I cannot waver from the truth. If I go back on my promise, the taint falls not on my honour but on yours."
+
+Chouboli trembles, silenced by this truth.
+
+"And so the story begins," the storyteller whispers.
+
+[[Settle into the tale|VillageTransition]]
+
+<<script>>
+  $(window).trigger('resize');
+<</script>>

@@ -1,0 +1,37 @@
+
+:: TunnelCollapse
+<<set $textChunks to [
+  "In her eagerness, she rushes through the tunnel without thinking. She does not notice the cracks in the walls. She does not hear the creaking of ancient stone.",
+  "All she hears is her own heartbeat and the call of her lover.",
+  "**A sound like the world splitting open echoes through the darkness.**",
+  "The ceiling gives way. Stone crashes down in a thunderous avalanche. Her screams pierce the blackness for only a moment before they are swallowed whole.",
+  "The tunnel becomes her tomb."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/tunnel2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="bad-end">
+      <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    </div>
+
+    <span id="next-link" style="display:none;">
+      <p class="bad-end-text">
+        <strong>Haste leads to death. Patience is a virtue.</strong>
+      </p>
+      <p style="text-align: center; margin-top: 30px;">
+        [[Try again from the tunnel entrance|TunnelEntrance]]
+      </p>
+    </span>
+
+    <<script>>
+      shakeSound.play();
+      $('#passages').addClass('shake');
+      setTimeout(function(){ $('#passages').removeClass('shake'); }, 500);
+    <</script>>
+  </div>
+</div>
+

@@ -1,0 +1,18 @@
+
+:: EagerAgreement
+<<set $textChunks to [
+  "\"Yes,\" the bride whispers without hesitation. \"Yes, I will come.\"",
+  "Her heart pounds with anticipation. The tunnel construction begins. Days feel like years as she waits."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/tunnel.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[The tunnel is complete|TunnelEntrance]]</span>
+  </div>
+</div>
+

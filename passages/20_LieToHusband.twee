@@ -1,0 +1,37 @@
+:: LieToHusband
+<div class="bad-end">
+
+"My lord," the sethani began nervously, "I dressed to welcome you home! The servants brought word of your arrival, and I wanted to—"
+
+### **"NO!"**
+
+Chouboli's voice CUTS through the chamber like a blade.
+
+She springs from her cushions, eyes blazing with fury.
+
+**"The bride wouldn't lie! Not after everything! Not after the thakur showed virtue, after the thief showed honor—she would not stain it all with deception! She told the truth, even knowing it might doom her!"**
+
+</div>
+
+<p class="drum-text">
+<strong>DHAM-DHAMADHAM!</strong>
+</p>
+
+<<set $speechCount to $speechCount + 1>>
+
+<p class="speech-count">
+*Chouboli has spoken for the THIRD time!*
+</p>
+
+Chouboli claps her hand over her mouth, realizing what she's done. But defiance still burns in her eyes.
+
+The storyteller grins. "Your Highness has excellent judgment. Let me tell it properly then..."
+
+[[The sethani confesses the truth|ConfessionToHusband]]
+
+<<script>>
+  dialogueSound.play();
+  shakeSound.play();
+  $('#passages').addClass('shake');
+  setTimeout(function(){ $('#passages').removeClass('shake'); }, 500);
+<</script>>

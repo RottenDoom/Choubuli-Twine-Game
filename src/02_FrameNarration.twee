@@ -1,0 +1,34 @@
+:: FrameNarration
+<<set $textChunks to [
+  "Just as eyes look more alluring outlined with kohl, and a brow looks prettier decorated with a tiki in vermillion red, so is a story better told with hunkara—affirming exclamations during storytelling.",
+  "A handsome young storyteller stands before Chouboli, who sits in silence on an ornate bed, bound by an oath never to speak.",
+  "The glittering necklace around her neck gleams in the lamplight."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background.jpg">
+    <img class="character-sprite" src="images/character.webp">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[The storyteller speaks|NecklaceOffer]]</span>
+  </div>
+</div>
+
+<<script>>
+window.nextChunk = function() {
+  var chunks = State.variables.textChunks;
+  var current = State.variables.currentChunk;
+  
+  if (current < chunks.length - 1) {
+    State.variables.currentChunk++;
+    $('#text-display').text(chunks[State.variables.currentChunk]);
+  } else {
+    // All chunks shown, show link
+    $('#dialogue-box').addClass('finished');
+    $('#next-link').show();
+  }
+};
+<</script>>

@@ -1,0 +1,179 @@
+:: StoryTitle
+Chaobuli Story VN
+
+:: StoryData
+{
+  "ifid": "F2277A49-95C0-4706-A598-B5F256AB183F",
+  "format": "SugarCube",
+  "format-version": "2.36.1"
+}
+
+:: Start
+<<setbg "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800">>
+<<setsprite "none">>
+
+<<dialogue>>
+<<name>>Narrator<</name>>
+<<text>>
+In the village of Bharatpur, there lived a poor man named Dukhu. He worked hard every day but barely had enough to feed his family.
+
+[[Continue->Scene2]]
+<</text>>
+<</dialogue>>
+
+:: Scene2
+<<setbg "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800">>
+<<setsprite "https://i.pravatar.cc/300?img=33">>
+
+<<dialogue>>
+<<name>>Dukhu<</name>>
+<<text>>
+One day, I heard about a wealthy merchant who was known for his generosity. Perhaps he could help me and my family.
+
+[[Visit the merchant->Scene3]]
+[[Look for other options->Scene2Alt]]
+<</text>>
+<</dialogue>>
+
+:: Scene2Alt
+<<setbg "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800">>
+<<setsprite "https://i.pravatar.cc/300?img=33">>
+
+<<dialogue>>
+<<name>>Dukhu<</name>>
+<<text>>
+After thinking it over, I realized that the merchant's help might be my best chance. I should visit him.
+
+[[Go to the merchant->Scene3]]
+<</text>>
+<</dialogue>>
+
+:: Scene3
+<<setbg "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800">>
+<<setsprite "https://i.pravatar.cc/300?img=12">>
+
+<<dialogue>>
+<<name>>Merchant<</name>>
+<<text>>
+Welcome, Dukhu! I've heard of your struggles. I can offer you work, but it will test your honesty and determination.
+
+I need someone to deliver a precious package to the next village. Many have tried, but few have succeeded without succumbing to temptation.
+
+[[Accept the task->Scene4]]
+[[Ask for more details first->Scene3Alt]]
+<</text>>
+<</dialogue>>
+
+:: Scene3Alt
+<<setbg "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800">>
+<<setsprite "https://i.pravatar.cc/300?img=12">>
+
+<<dialogue>>
+<<name>>Merchant<</name>>
+<<text>>
+Smart man! The task is simple: deliver this sealed package without opening it. Your reward will depend on your integrity.
+
+[[Accept and begin the journey->Scene4]]
+<</text>>
+<</dialogue>>
+
+:: Scene4
+<<setbg "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800">>
+<<setsprite "https://i.pravatar.cc/300?img=33">>
+
+<<dialogue>>
+<<name>>Dukhu<</name>>
+<<text>>
+I began my journey with the sealed package. The road was long, and curiosity gnawed at me. What could be so valuable inside?
+
+The temptation grew stronger with each step...
+
+[[Open the package->BadEnding]]
+[[Resist and continue the journey->GoodEnding]]
+<</text>>
+<</dialogue>>
+
+:: BadEnding
+<<setbg "https://images.unsplash.com/photo-1495954484750-af469f2f9be5?w=800">>
+<<setsprite "https://i.pravatar.cc/300?img=33">>
+
+<<dialogue>>
+<<name>>Narrator<</name>>
+<<text>>
+Dukhu couldn't resist. He opened the package and found it contained only chaobuli—puffed rice. It was a test of his honesty.
+
+The merchant refused to help him further, and Dukhu returned home with nothing, having lost his one chance at prosperity.
+
+[[Start Over->Start]]
+<</text>>
+<</dialogue>>
+
+:: GoodEnding
+<<setbg "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=800">>
+<<setsprite "https://i.pravatar.cc/300?img=12">>
+
+<<dialogue>>
+<<name>>Merchant<</name>>
+<<text>>
+Well done, Dukhu! You have proven your honesty. The package contained only chaobuli, but your integrity is worth more than gold.
+
+I hereby offer you a permanent position in my business. You and your family will never go hungry again.
+
+[[Play Again->Start]]
+<</text>>
+<</dialogue>>
+
+:: PointClickExample
+<<setbg "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800">>
+<<setsprite "none">>
+<<hotspot 100 150 80 80 "ClickBook">>
+<<hotspot 400 200 100 100 "ClickLamp">>
+<<hotspot 650 180 90 90 "ClickWindow">>
+
+<<dialogue>>
+<<name>>System<</name>>
+<<text>>
+This is a point-and-click example. Click on the highlighted areas in the background to interact with different objects!
+
+[[Back to Story->Start]]
+<</text>>
+<</dialogue>>
+
+:: ClickBook
+<<setbg "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800">>
+<<setsprite "none">>
+
+<<dialogue>>
+<<name>>System<</name>>
+<<text>>
+You clicked on the book! You could trigger inventory additions, reveal clues, or start mini-games here.
+
+[[Back->PointClickExample]]
+<</text>>
+<</dialogue>>
+
+:: ClickLamp
+<<setbg "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800">>
+<<setsprite "none">>
+
+<<dialogue>>
+<<name>>System<</name>>
+<<text>>
+You clicked on the lamp! It illuminates the room, revealing a hidden passage...
+
+[[Back->PointClickExample]]
+<</text>>
+<</dialogue>>
+
+:: ClickWindow
+<<setbg "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800">>
+<<setsprite "none">>
+
+<<dialogue>>
+<<name>>System<</name>>
+<<text>>
+You clicked on the window! You see a mysterious figure outside...
+
+[[Back->PointClickExample]]
+<</text>>
+<</dialogue>>

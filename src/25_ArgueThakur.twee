@@ -1,0 +1,20 @@
+
+:: ArgueThakur
+<<set $textChunks to [
+  "\"The thakur was MOST true!\" the storyteller declares. \"To recognize dharma in that very moment—that takes immense strength!\"",
+  "The necklace agrees: \"Yes! The thakur's transformation was divine!\"",
+  "\"Though one could argue the thief defied his nature, or the seth showed rare forgiveness...\"",
+  "The voices clash and debate..."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[The debate continues|ChoubolitStruggle1]]</span>
+  </div>
+</div>
+

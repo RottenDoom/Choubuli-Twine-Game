@@ -1,0 +1,27 @@
+:: TunnelEntrance
+<h2 class="story-title">The Night of Decision</h2>
+
+The bride adorns herself completely—kohl for her eyes, sindur for her forehead, pearls in her hair, every piece of jewelry glittering against her skin.
+
+She stands before the tunnel entrance. The darkness stretches before her like the throat of some ancient beast.
+
+Her heart is pounding. She takes a breath.
+
+**How should she enter?**
+
+[[Rush forward eagerly, overcome with longing|TunnelCollapse]]
+[[Move slowly and carefully, testing each step|TunnelTransition]]
+
+<div id="scene">
+  <canvas id="particle-canvas"></canvas>
+
+  <img src="images/tunnel.jpg" usemap="#tunnelmap" alt="Tunnel entrance" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+
+  <map name="tunnelmap">
+    <area shape="rect" coords="300,400,500,600" alt="Darkness" href="#" onclick="Dialog.setup('Tunnel Properties'); Dialog.wiki('The darkness is absolute, like the throat of an ancient beast.'); Dialog.open(); return false;">
+  </map>
+</div>
+
+<<script>>
+  $(window).trigger('resize');
+<</script>>

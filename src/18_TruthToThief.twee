@@ -1,0 +1,21 @@
+
+:: TruthToThief
+<<set $textChunks to [
+  "\"You should be ashamed,\" the sethani said with dignity, \"casting such aspersions on a father's concern for his daughter!\"",
+  "Then she narrated the whole story in detail—how she went with desire, how the thakur called her daughter, how everything changed in a single moment.",
+  "Khapariyau the Thief believed her. The truth rang clear in her voice.",
+  "He made her his dharma sister and quietly went his way, disappointed. But he was, after all, a subject in this thikana. He couldn't risk looting the thakur's adopted daughter.",
+  "All his hard labor digging the tunnel was worth nothing but the labor itself."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/tunnel.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[Return to the haveli|HusbandReturns]]</span>
+  </div>
+</div>
+

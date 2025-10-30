@@ -1,0 +1,30 @@
+
+:: QuestionOfTruth
+<<set $textChunks to [
+  "The storyteller turned to the necklace on the floor.",
+  "\"Tell me then, oh wise necklace **which of the four was most true?**",
+  "The thakur who turned from sin?",
+  "The thief who honored dharma?",
+  "The bride who confessed all?",
+  "Or the seth who forgave?\"",
+  "The necklace answered promptly: \"Both the thakur and the husband were most true!\"",
+  "The storyteller shook their head vigorously.",
+  "\"I disagree! Let us debate this properly.\"",
+  "**Which argument will you make?**"
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">
+      [[Argue that the THIEF was most true|ArgueThief]]
+      [[Argue that the THAKUR was most true|ArgueThakur]]
+      [[Argue that the SETH was most true|ArgueSeth]]
+    </span>
+  </div>
+</div>
+

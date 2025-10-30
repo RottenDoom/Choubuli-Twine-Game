@@ -1,0 +1,25 @@
+
+:: HusbandReturns
+<<set $textChunks to [
+  "The sethani returned to the bridal chamber just in time to see the seth taking off his turban.",
+  "Who could understand the leelas of Bhagwan?",
+  "The seth turned around, unable to stop staring. Where had the sethani been all dressed up like this? His brow throbbed with foreboding.",
+  "He smiled as he asked: \"You must have had word of my imminent arrival. A wife wouldn't dress up so if she hadn't received news of her husband's return... would she?\"",
+  "The sethani stood frozen, her heart pounding.",
+  "**What should she do?**"
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">
+      [[Tell him the complete truth|ConfessionToHusband]]
+      [[Make up an excuse about expecting his return|LieToHusband]]
+    </span>
+  </div>
+</div>
+

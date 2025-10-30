@@ -1,0 +1,13 @@
+:: StoryTitle
+Choubuli
+
+:: StoryData
+{
+    "ifid": "F2277A49-95C0-4706-A598-B5F256AB183F",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "start": "Start"
+}
+
+:: StoryInit
+<<cacheaudio "test" "audio/angy.mp3">>

@@ -1,0 +1,20 @@
+
+:: CautiousJourney
+<<set $textChunks to [
+  "She moves slowly through the tunnel, one hand trailing along the wall. The darkness is absolute, but she trusts her footing. Step by step, breath by breath.",
+  "She thinks of the thakur waiting for her. She thinks of the seth who abandoned her. She thinks of herself—caught between duty and desire.",
+  "When she stepped into that dark tunnel, she felt as if the sky of her love was studded with nine lakh stars. For the bride, this dark tunnel was more heavenly than heaven itself.",
+  "The tunnel seems endless. But finally, ahead, she sees a sliver of light."
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/tunnel.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    <span id="next-link" style="display:none;">[[Enter the Rang Mahal|RangMahalTransition]]</span>
+  </div>
+</div>
+

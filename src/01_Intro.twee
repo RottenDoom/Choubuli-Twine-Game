@@ -1,0 +1,23 @@
+:: Start
+<<set $textChunks to [
+  ""
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+	<div id="game-container">
+		<div class="video-style">
+			<iframe
+				src="video/video1.mp4"
+				frameborder="0"
+				allow="autoplay; fullscreen"
+				allowfullscreen
+				style="width:100%; height:100%; object-fit:cover;">
+			</iframe>
+		</div>
+	</div>
+	<div id="dialogue-box" onclick="nextChunk()">
+		<div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+		<span id="next-link" style="display:none;">[[Begin the story|FrameNarration]]</span>
+	</div>
+</div>

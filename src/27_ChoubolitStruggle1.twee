@@ -1,0 +1,33 @@
+
+:: ChoubolitStruggle1
+<<set $textChunks to [
+  "The argument grows more heated. Their voices rise and clash.",
+  "Chouboli's jaw clenches. Her hands grip the cushions tightly.",
+  "**Chouboli's thoughts:**",
+  "*They're both wrong. The sethani was most true. She could have lied so easily... But no. I mustn't speak. I swore an oath. Control yourself.*",
+  "**What does Chouboli do?**"
+]>>
+<<set $currentChunk to 0>>
+
+<div id="scene">
+  <div id="game-container">
+    <img id="background" src="images/background2.jpg">
+  </div>
+  <div id="dialogue-box" onclick="nextChunk()">
+    <div class="struggle-box">
+      <div class="narration-text" id="text-display">$textChunks[$currentChunk]</div>
+    </div>
+
+    <span id="next-link" style="display:none;">
+      <div class="choice-container">
+        <div class="choice-button">
+          [[Stay Silent|ChoubolitStruggle2]]
+        </div>
+        <div class="choice-button">
+          [[SPEAK|ChobouliFourthSpeech]]
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
